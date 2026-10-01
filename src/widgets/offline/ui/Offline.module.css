@@ -1,0 +1,35 @@
+.figure {
+  max-width: 18rem;
+}
+
+.frame {
+  position: relative;
+}
+
+.photo {
+  aspect-ratio: 865 / 953;
+  border: 1px solid var(--color-line);
+}
+
+/* Пометка «карандашом»: рукописный шрифт, лёгкий наклон, стрелка к фото. */
+.marginNote {
+  position: absolute;
+  top: 30%;
+  left: calc(100% + 0.75rem);
+  color: var(--color-mark);
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  line-height: 1;
+  white-space: nowrap;
+  rotate: -8deg;
+
+  &::before {
+    content: '← ';
+  }
+
+  @media (width < 40rem) {
+    inset: auto 0.5rem 0.5rem auto;
+    padding: 0 0.3rem;
+    background: var(--color-bg);
+  }
+}

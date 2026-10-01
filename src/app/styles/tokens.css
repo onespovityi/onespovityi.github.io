@@ -1,0 +1,57 @@
+/*
+ * Дизайн-токены в духе технических спецификаций (W3C, ECMA-262): белая бумага,
+ * синие заголовки, текст с засечками, цветные блоки примечаний и примеров.
+ * Цвета заданы через light-dark(): тема следует за системой, data-theme на <html> фиксирует выбор.
+ */
+:root {
+  color-scheme: light dark;
+
+  /* Бумага и чернила */
+  --color-bg: light-dark(#fff, #18191b);
+  --color-bg-sunken: light-dark(#f7f8f9, #202124);
+  --color-fg: light-dark(#1b1b1b, #e3e3e3);
+  --color-fg-muted: light-dark(#555, #a8a8a8);
+  --color-line: light-dark(#dcdcdc, #333539);
+
+  /* Заголовки и ссылки */
+  --color-heading: light-dark(#005a9c, #7fb5ec);
+  --color-link: light-dark(#034575, #8cc0ff);
+  --color-link-underline: light-dark(#707070, #6a7686);
+  --color-link-hover-bg: light-dark(#e6f0f8, #22303d);
+  --color-mark: light-dark(#c00, #ff8080);
+
+  /* Блоки: примечание (зелёный), код (серый) */
+  --color-note-bg: light-dark(#e9fbe9, #1c2b1d);
+  --color-note-border: light-dark(#52e052, #3c8a3c);
+  --color-note-label: light-dark(#178217, #7fd37f);
+  --color-code-bg: light-dark(#f7f8f9, #222327);
+
+  /* Шрифты */
+  --font-serif: 'Literata Variable', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', 'Consolas', 'Menlo', monospace;
+  --font-hand: 'Caveat Variable', 'Comic Sans MS', cursive;
+
+  /* Сетка */
+  --sidebar-width: 18rem;
+  --measure: 46rem;
+  --gutter: clamp(16px, 4vw, 40px);
+
+  /* Движение — только обратная связь на взаимодействие */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 150ms;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+  }
+}

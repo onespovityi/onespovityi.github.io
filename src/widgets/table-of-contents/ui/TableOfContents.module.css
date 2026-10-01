@@ -1,0 +1,45 @@
+.root {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+.title {
+  margin-bottom: 0.75rem;
+  color: var(--color-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.list {
+  list-style: none;
+
+  & .list {
+    padding-left: 1.6em;
+  }
+}
+
+.link {
+  display: flex;
+  gap: 0.6em;
+  padding: 0.2rem 0.5rem;
+  border-left: 3px solid transparent;
+  color: var(--color-fg);
+  line-height: 1.35;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-link);
+  }
+}
+
+.secno {
+  min-width: 1.6em;
+  color: var(--color-fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.active {
+  border-left-color: var(--color-heading);
+  background: var(--color-link-hover-bg);
+  color: var(--color-link);
+}

@@ -1,0 +1,13 @@
+/* Портрет обтекается текстом справа на широком экране, на узком стоит в потоке. */
+.portrait {
+  @media (width >= 40rem) {
+    float: right;
+    width: 15rem;
+    margin: 0.25rem 0 1rem 1.5rem;
+  }
+}
+
+.photo {
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--color-line);
+}

@@ -1,0 +1,19 @@
+.list {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1rem;
+
+  & dt {
+    font-weight: 600;
+  }
+
+  @media (width < 36rem) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

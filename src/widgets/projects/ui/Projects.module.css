@@ -1,0 +1,77 @@
+.kind {
+  color: var(--color-fg-muted);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+
+.points {
+  margin-top: 0.75rem;
+  padding-left: 1.5em;
+
+  & li {
+    margin-block: 0.3rem;
+  }
+}
+
+.shot {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-line);
+}
+
+.footer {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Таблица репозиториев — как таблицы значений в спецификациях. */
+.repos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+
+  & th,
+  & td {
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--color-line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  & th {
+    background: var(--color-bg-sunken);
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+
+  & td:first-child {
+    overflow-wrap: anywhere;
+  }
+
+  /* На узком экране строки таблицы становятся карточками: имя, описание, стек. */
+  @media (width < 36rem) {
+    & thead {
+      display: none;
+    }
+
+    & tr {
+      display: block;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    & td {
+      display: block;
+      padding: 0.1rem 0;
+      border: 0;
+    }
+  }
+}
+
+.repoStack {
+  color: var(--color-fg-muted);
+}
+
+.more {
+  margin-top: 0.75rem;
+}

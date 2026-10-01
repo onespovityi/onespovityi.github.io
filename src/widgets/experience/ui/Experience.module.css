@@ -1,0 +1,71 @@
+.meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.15rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+
+  & dt {
+    color: var(--color-fg-muted);
+  }
+}
+
+.group {
+  margin-top: 1rem;
+}
+
+.groupTitle {
+  margin-bottom: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.items {
+  padding-left: 1.5em;
+
+  & li {
+    margin-block: 0.3rem;
+  }
+}
+
+/* Таблица результатов — как таблицы значений в спецификациях. */
+.results {
+  width: 100%;
+  margin-top: 1.25rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+
+  & caption {
+    margin-bottom: 0.4rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  & th,
+  & td {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--color-line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  & th {
+    background: var(--color-bg-sunken);
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+}
+
+.value {
+  width: 7rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stack {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,27 @@
+.channels {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  margin-top: 1rem;
+
+  & dt {
+    font-weight: 600;
+  }
+
+  @media (width < 30rem) {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    & dd {
+      margin-bottom: 0.6rem;
+    }
+  }
+}
+
+.email {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+}

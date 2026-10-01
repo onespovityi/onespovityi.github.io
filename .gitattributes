@@ -1,0 +1,5 @@
+# Везде LF: так ждёт Prettier, и проверки в CI на Linux совпадают с локальными.
+* text=auto eol=lf
+*.webp binary
+*.avif binary
+*.svg text eol=lf

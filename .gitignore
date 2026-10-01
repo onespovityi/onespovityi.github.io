@@ -1,0 +1,9 @@
+node_modules
+dist
+.vite-react-ssg-temp
+*.local
+.DS_Store
+
+# Исходники фото остаются только локально: в оригинале детского фото есть человек,
+# которого на сайте нет. Готовые кадры лежат в public/photos.
+assets-src/

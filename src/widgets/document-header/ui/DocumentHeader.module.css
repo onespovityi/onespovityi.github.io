@@ -1,0 +1,68 @@
+.root {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Собственная марка документа: квадрат с инициалами, без чужих логотипов. */
+.logo {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 2px;
+  background: var(--color-heading);
+  color: var(--color-bg);
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--color-link);
+  }
+}
+
+.title {
+  color: var(--color-heading);
+  font-family: var(--font-sans);
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: var(--color-heading);
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+}
+
+/* Метаданные: термин и значение в две колонки, как «This version / Editors». */
+.meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1rem;
+  margin-top: 1.5rem;
+
+  & dt {
+    font-weight: 600;
+  }
+
+  @media (width < 36rem) {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    & dd {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

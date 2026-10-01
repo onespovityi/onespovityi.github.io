@@ -1,0 +1,73 @@
+.root {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 0.6rem;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  background: var(--color-bg);
+  color: var(--color-fg-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  transition: color var(--duration-fast) var(--ease-out);
+
+  &:hover {
+    background: var(--color-bg-sunken);
+    color: var(--color-fg);
+  }
+
+  &:active {
+    scale: 0.96;
+  }
+}
+
+.copied {
+  color: var(--color-note-label);
+
+  &:hover {
+    color: var(--color-note-label);
+  }
+}
+
+/* Слот фиксированного размера: иконки лежат друг на друге и сменяются кроссфейдом. */
+.icon {
+  display: grid;
+  width: 14px;
+  height: 14px;
+
+  & svg {
+    grid-area: 1 / 1;
+    transition-property: opacity, scale, filter;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    & svg {
+      transition: none;
+    }
+  }
+}
+
+.iconCheck,
+.copied .iconCopy {
+  opacity: 0;
+  scale: 0.25;
+  filter: blur(4px);
+}
+
+.copied .iconCheck {
+  opacity: 1;
+  scale: 1;
+  filter: blur(0);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

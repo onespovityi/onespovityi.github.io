@@ -1,0 +1,96 @@
+/* Заголовки: рубленый шрифт, синий цвет, номер раздела перед текстом. */
+.heading {
+  position: relative;
+  color: var(--color-heading);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+  scroll-margin-top: 1.5rem;
+}
+
+.h2 {
+  margin-block: 3rem 1rem;
+  font-size: 1.5rem;
+}
+
+.h3 {
+  margin-block: 2rem 0.75rem;
+  font-size: 1.2rem;
+}
+
+.secno {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Якорь «§» висит на левом поле и появляется при наведении или фокусе. */
+.selfLink {
+  position: absolute;
+  top: 0;
+  left: -1.4em;
+  width: 1.4em;
+  color: var(--color-fg-muted);
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+
+  &:focus-visible {
+    opacity: 1;
+  }
+
+  &:hover {
+    background: none;
+    color: var(--color-heading);
+  }
+
+  .heading:hover & {
+    opacity: 1;
+  }
+
+  @media (hover: none) {
+    position: static;
+    margin-left: 0.4em;
+    opacity: 0.5;
+  }
+}
+
+/* Примечание: цветная полоса слева, метка капителью. */
+.note {
+  margin-block: 1.25rem;
+  padding: 0.75rem 1rem;
+  border-left: 0.4rem solid var(--color-note-border);
+  background: var(--color-note-bg);
+
+  & > :where(p, ul, ol) + :where(p, ul, ol) {
+    margin-top: 0.6rem;
+  }
+}
+
+.noteLabel {
+  margin-bottom: 0.35rem;
+  color: var(--color-note-label);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Рисунки */
+.figure {
+  margin-block: 1.5rem;
+}
+
+.figcaption {
+  margin-top: 0.5rem;
+  color: var(--color-fg-muted);
+  font-size: 0.92rem;
+  text-wrap: pretty;
+}
+
+.figno {
+  color: var(--color-fg);
+  font-weight: 600;
+}
